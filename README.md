@@ -1,10 +1,13 @@
 # DataInsight — Sales Analytics
 
+#### Video Demo:
+https://youtu.be/pJLDrEoxnlg
+
 ## 📊 Sobre o projeto
 
-**DataInsight** é um projeto de análise de dados desenvolvido em Python como projeto final do **CS50's Introduction to Programming with Python (CS50P)**.
+DataInsight é um projeto de análise de dados desenvolvido em Python como projeto final do CS50's Introduction to Programming with Python (CS50P).
 
-O projeto utiliza dados reais de vendas de uma empresa de varejo online para demonstrar como Python pode ser utilizado para **carregar, limpar, analisar e visualizar dados**.
+O projeto utiliza dados reais de vendas de uma empresa de varejo online para demonstrar como Python pode ser utilizado para carregar, limpar, analisar e visualizar dados.
 
 O objetivo é transformar dados brutos em informações que ajudem a compreender o desempenho das vendas.
 
@@ -27,11 +30,11 @@ O DataInsight busca responder perguntas como:
 
 ## 🗃️ Dataset
 
-O projeto utiliza o dataset **Online Retail**, disponibilizado pelo **UCI Machine Learning Repository**.
+O projeto utiliza o dataset **Online Retail**, disponibilizado pelo UCI Machine Learning Repository.
 
-Os dados representam transações de uma empresa de varejo online do Reino Unido realizadas entre **dezembro de 2010 e dezembro de 2011**.
+Os dados representam transações de uma empresa de varejo online do Reino Unido realizadas entre dezembro de 2010 e dezembro de 2011.
 
-O conjunto original possui **541.909 registros** e 8 colunas:
+O conjunto original possui 541.909 registros e 8 colunas:
 
 | Coluna | Descrição |
 |---|---|
@@ -86,23 +89,29 @@ O ticket médio é calculado por:
 Ticket médio = Faturamento total ÷ Número de transações
 ```
 
+Na execução atual:
+
+```text
+Registros originais: 541.909
+Registros após a limpeza: 524.878
+
+Faturamento total: £10.642.110,80
+Itens vendidos: 5.572.420
+Transações: 19.960
+Ticket médio: £533,17
+```
+
 ---
 
 ## 📊 Visualizações
 
-O projeto utiliza **Matplotlib** para gerar gráficos automaticamente.
-
-São gerados:
+O projeto utiliza **Matplotlib** para gerar três gráficos:
 
 - Faturamento mensal;
 - Top 10 produtos por faturamento;
 - Top 10 países por faturamento.
 
-Os gráficos são salvos na pasta:
-
-```text
-charts/
-```
+Os gráficos são salvos automaticamente na pasta `charts/`.
 
 ---
 
@@ -131,11 +140,11 @@ DataInsight/
 
 ### `project.py`
 
-Arquivo principal do projeto. Contém as funções responsáveis por carregar, limpar e analisar os dados, gerar os gráficos e executar o programa.
+Arquivo principal do projeto. Contém as funções responsáveis por carregar, limpar, analisar os dados, gerar os gráficos e executar o programa.
 
 ### `test_project.py`
 
-Contém os testes automatizados feitos com **Pytest** para verificar o carregamento, a limpeza e os cálculos da análise.
+Contém os testes automatizados desenvolvidos com **Pytest** para verificar as principais funções do projeto.
 
 ### `requirements.txt`
 
@@ -143,15 +152,15 @@ Lista as bibliotecas externas necessárias para executar o projeto.
 
 ### `README.md`
 
-Documentação do projeto.
+Documentação do projeto, incluindo objetivo, funcionamento, estrutura e instruções de execução.
 
 ### `data/Online Retail.xlsx`
 
-Dataset utilizado na análise.
+Dataset utilizado para realizar a análise.
 
 ### `charts/`
 
-Pasta onde os gráficos gerados pelo programa são armazenados.
+Pasta onde ficam armazenados os gráficos gerados pelo programa.
 
 ---
 
@@ -181,29 +190,21 @@ Essa organização facilita a leitura, manutenção e realização de testes.
 
 ## ▶️ Como executar
 
-### Instalar as dependências
-
-No terminal, dentro da pasta do projeto:
+### 1. Instalar as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Executar o projeto
+### 2. Executar o projeto
 
 ```bash
 python project.py
 ```
 
-O programa irá:
+O programa irá carregar o dataset, limpar os dados, calcular os indicadores, exibir os resultados no terminal e gerar os gráficos na pasta `charts`.
 
-1. Carregar o dataset;
-2. Limpar os dados;
-3. Calcular os indicadores;
-4. Exibir os resultados no terminal;
-5. Gerar os gráficos na pasta `charts`.
-
-### Executar os testes
+### 3. Executar os testes
 
 ```bash
 pytest
@@ -215,15 +216,15 @@ pytest
 
 ```text
 Online Retail.xlsx
-        ↓
-   load_data()
-        ↓
-   clean_data()
-        ↓
-  analyze_data()
-        ↓
- create_charts()
-        ↓
+       ↓
+load_data()
+       ↓
+clean_data()
+       ↓
+analyze_data()
+       ↓
+create_charts()
+       ↓
 Resultados + Gráficos
 ```
 
@@ -231,10 +232,10 @@ Resultados + Gráficos
 
 ## 🎥 Vídeo de demonstração
 
-**Vídeo:**  
-INSIRA AQUI O LINK DO SEU VÍDEO NO YOUTUBE
+O vídeo demonstra a execução do DataInsight, sua estrutura, as principais funcionalidades, os resultados da análise, os gráficos gerados e a execução dos testes automatizados.
 
-O vídeo apresentará a execução do programa, sua estrutura, as principais funcionalidades e os resultados obtidos.
+**Vídeo:**  
+https://youtu.be/pJLDrEoxnlg
 
 ---
 
@@ -244,7 +245,9 @@ O vídeo apresentará a execução do programa, sua estrutura, as principais fun
 
 Estudante de Análise e Desenvolvimento de Sistemas.
 
-Projeto desenvolvido para o **CS50's Introduction to Programming with Python (CS50P)**.
+Projeto desenvolvido como trabalho final do **CS50's Introduction to Programming with Python (CS50P)**.
+
+- GitHub: https://github.com/Maickon0709
 
 ---
 
@@ -253,3 +256,7 @@ Projeto desenvolvido para o **CS50's Introduction to Programming with Python (CS
 **UCI Machine Learning Repository — Online Retail Dataset**
 
 O dataset é disponibilizado sob a licença **CC BY 4.0**.
+
+Fonte:
+
+https://archive.ics.uci.edu/dataset/352/online+retail
